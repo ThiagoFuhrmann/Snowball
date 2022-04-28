@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 :root{
-    --primary-color: #57FF38;
-    --primary-color-darker: #4B8042;
-    --primary-color-darker-two: #2B801C;
+    --primary-color-light: #AACCA5;
+    --primary-color: #6B8068;
+    --primary-color-dark: #4B8042;
+    --primary-color-dark-two: #2B801C;
+    --secondary-color: white;
     --gap: 3rem;
+    --primary-font-family: 'Montserrat', sans-serif;
 }
 
 * {
@@ -17,17 +20,34 @@ html{
     font-size: 62.5%;
     scroll-behavior: smooth;
 }
+p{
+    font-size: 1.2rem;
+}
+footer{
+    background-color: var(--primary-color-light);
+    color: var(--secondary-color);
+    height: 4rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a{
+    text-decoration: none;
+    color:var(--secondary-color);
+}
 
 
 /* Menu */
 .menu{
-    background: var(--primary-color);
+    background: var(--primary-color-light);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     width:100%;
-    border-bottom: 0.1rem solid lightgray;
+    border-bottom: 0.2rem solid var(--primary-color);
     z-index:1;
     
 }
@@ -46,10 +66,10 @@ html{
 
 .menu h1 a{ 
     
-    color:white;
+    color: var(--secondary-color);
     font-size:2.3rem;
     text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--primary-font-family);
     padding-left: 2rem;
 }
 
@@ -61,8 +81,8 @@ html{
 .menu ul li a {
 
     
-    color:white;
-    font-family: 'Montserrat', sans-serif;
+    color:var(--secondary-color);
+    font-family: var(--primary-font-family);
     text-decoration: none;
     display: block;
     padding: 2rem;
@@ -71,7 +91,8 @@ html{
 }
 
 .menu ul li a:hover {
-    background-color: var(--primary-color-darker);
+    background-color: var(--primary-color);
+    transition: all 300ms ease-in-out;
 }
 
 /* .menu ul li a::after{
@@ -129,7 +150,7 @@ html{
     .close-menu-label::after{
         content: '≡';
         background: var(--primary-color);
-        color: white;
+        color: var(--secondary-color);
         position: fixed;
         z-index: 2;
         top: 2rem;
@@ -158,14 +179,15 @@ html{
     height: 100px;
     width: 100px;
     border-radius: 50%;
+    margin-right: 20px;
 }
 .secao{
-    height: 100vh;
-    display:flex;
-    align-items: center;
+    height: 90vh;
+    
 }
 
 .perfil {
+    margin: 20px;
     height:200px;
     width: 400px;
     display: flex;
@@ -173,24 +195,40 @@ html{
     padding: 20px;
     align-items: center;
     border-radius: 5%;
-    background-color: var(--primary-color);
+    background-color: var(--primary-color-light);
     border: solid 5px var(--primary-color)
 }
 
 .descricao {
-    padding: 10px 10px 10px 50px;
     height: 100%;
     display: flex;
+    align-items: center;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
-.descricao h2 {
-    color: white;
-    font-family: 'Montserrat', sans-serif;
+.descricao h2, .descricao p {
+    color: var(--secondary-color);
+    font-family: var(--primary-font-family);
 }
+
 
 .logos img{
     width: 40px;
-    margin: 5px
+    margin: 0px 5px;
+}
+
+
+.quem-somos {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.title {
+    font-size: 3rem;
+    font-family: var(--primary-font-family);
+    color: var(--primary-color);
+    margin: 20px;
 }
